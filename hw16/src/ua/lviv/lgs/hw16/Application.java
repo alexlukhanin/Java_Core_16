@@ -126,7 +126,12 @@ public class Application {
 		System.out.println(newInstanceHuman);
 		humanClass.getMethod("run", null).invoke(newInstanceHuman, null);
 		playerClass1.getMethod("walk", null).invoke(player1, null);
-
+		System.out.println();
+		Field field4 = playerClass2.getField("name");
+		System.out.println(field4);
+		field4.set(player1, "Sonny");
+		System.out.println(player1);
+		
 	}
 
 }
